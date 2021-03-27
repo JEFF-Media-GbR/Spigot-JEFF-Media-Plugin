@@ -6,4 +6,6 @@ public interface SpigotJeffMediaPlugin {
     String getNONCE();
     String getRESOURCE();
 
+    SpigotJeffMediaPlugin getInstance();
+
 }
