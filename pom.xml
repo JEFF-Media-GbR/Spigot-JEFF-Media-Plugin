@@ -13,7 +13,6 @@
         <java.version>1.8</java.version>
     </properties>
 
-
     <build>
         <resources>
             <resource>
@@ -40,7 +39,6 @@
                 </configuration>
             </plugin>
         </plugins>
-
         <extensions>
             <extension>
                 <groupId>org.apache.maven.wagon</groupId>
@@ -48,9 +46,23 @@
                 <version>3.4.1</version>
             </extension>
         </extensions>
-
     </build>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot</artifactId><!-- Using spigot instead of spigot-api to access GameProfile class -->
+            <version>1.16.5-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
 
     <distributionManagement>
         <repository>
